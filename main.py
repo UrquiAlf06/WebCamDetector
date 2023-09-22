@@ -16,6 +16,12 @@ count = 1
 images_to_remove = []
 
 
+# Checks if the imgs folder is created, if not it creates one.
+def create_imgs_folder():
+    if not os.path.exists("imgs"):
+        os.makedirs("imgs")
+
+
 def clean_folder():
     for image in images_to_remove:
         try:
@@ -27,6 +33,8 @@ def clean_folder():
         except Exception as e:
             print(f"Error removing {image}: {e}")
 
+
+create_imgs_folder()
 
 while True:
     status = 0
@@ -59,6 +67,5 @@ while True:
     if key == ord("q"):
         break
 
-# After the loop, clean up the images
 clean_folder()
 video.release()
