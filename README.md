@@ -42,6 +42,6 @@ $ python3 main.py
 
 In the emailcam.py file in line 25 you can change the two first arguments of 
 ```python
-gmail.sendmail(email_user, email_user, email_message.as_string
+gmail.sendmail(email_user, email_user, email_message.as_string())
 ```
  The first one is the one who sends the email and the second for who it will be recieving it so you can change that and add another param in the .env file to make it more anonymous.
